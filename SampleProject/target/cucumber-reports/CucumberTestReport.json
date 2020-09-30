@@ -1,0 +1,122 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-01T05:20:33.257Z",
+        "line": 4,
+        "name": "Verify whether Api status code",
+        "description": "",
+        "id": "openweathermap-getweatherdetails-api;verify-whether-api-status-code",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I have set the City parameters as \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "London",
+                  "offset": 35
+                }
+              ],
+              "location": "RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.Given_I_Have_Set_the_City_Parameter(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Appid for the request URI as \"439d4b804bc8187953eb36d2a8c26a02\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "439d4b804bc8187953eb36d2a8c26a02",
+                  "offset": 30
+                }
+              ],
+              "location": "RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.Given_AppId_For_the_Request_URI(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3997000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send the Api GetWeatherDetails get request",
+            "match": {
+              "location": "RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.When_I_send_API_GetWeatherDeatils_Request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Validating the Status code of Response expected:\u003c203\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:555)\r\n\tat RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.Then_Status_Code_Of_the_Response_will_be(GetWeatherDetailsSteps.java:49)\r\n\tat ✽.status code of the response will be 203(file:///D:/ProgramFiles/EclipseWorkSpace/SampleProject/src/test/java/RestAssuredAPI/SampleProject/Test.feature:8)\r\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "status code of the response will be 203",
+            "match": {
+              "arguments": [
+                {
+                  "val": "203",
+                  "offset": 36
+                }
+              ],
+              "location": "RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.Then_Status_Code_Of_the_Response_will_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "City name in the response should be \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"London\"",
+                  "offset": 36
+                }
+              ],
+              "location": "RestAssuredAPI.SampleProject.GetWeatherDetailsSteps.city_name_in_the_response_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetWeatherDetails"
+          }
+        ]
+      }
+    ],
+    "name": "openweathermap GetWeatherDetails Api",
+    "description": "",
+    "id": "openweathermap-getweatherdetails-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/RestAssuredAPI/SampleProject/Test.feature",
+    "tags": [
+      {
+        "name": "@GetWeatherDetails",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
