@@ -3,7 +3,7 @@ node{
     git 'https://github.com/aravinthansrinivasan/SampleBDD.git'
    }
   stage('Compile-Package'){
-def mvnHome = tool name: '', type: 'maven'
+def mvnHome = tool name: 'Maven-3.6.3', type: 'maven'
    sh "${mvnHome}/bin/mvn package"
    }
 }
